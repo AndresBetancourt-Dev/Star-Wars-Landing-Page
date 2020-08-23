@@ -1,69 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rellax.js Test - Landing Page</title>
+    <title>Star Wars - Landing Page</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <meta name="description" content="This is a landing page for Star Wars, using Rellax.js and Font Awesome">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0f2d499c4d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="star-wars__header">
-             <div class="star-wars__logo">
-                 <div class="star-wars__logo--text">
-                     STAR
-                 </div>
-                 <div class="star-wars__logo--text">
-                    WARS
-                </div>
-             </div>
-            <ul class="star-wars__nav">
-                <li class="star-wars__nav--item">
-                    <a href="#history" class="star-wars__nav--link">History</a>
-                </li>
-                <li class="star-wars__nav--item">
-                    <a href="#gallery" class="star-wars__nav--link">images</a>
-                </li>
-                <li class="star-wars__nav--item">
-                    <a href="#social" class="star-wars__nav--link">Social</a>
-                </li>
-            </ul>
+        <div class="star-wars__logo">
+            <div class="star-wars__logo--text logo-top">
+                STAR
+            </div>
+            <div class="star-wars__logo--text logo-bottom">
+                WARS
+            </div>
+        </div>
+        <ul class="star-wars__nav">
+            <li class="star-wars__nav--item">
+                <a href="#history" class="star-wars__nav--link">History</a>
+            </li>
+            <li class="star-wars__nav--item">
+                <a href="#gallery" class="star-wars__nav--link">images</a>
+            </li>
+            <li class="star-wars__nav--item">
+                <a href="#social" class="star-wars__nav--link">Social</a>
+            </li>
+        </ul>
     </header>
 
     <section class="star-wars__website rellax">
-        <h1 class="star-wars__title rellax" data-rellax-speed="4">
-            You are the Chosen One. You have brought balance to this world. Stay on this path, and you will do it again for the galaxy. But beware your heart.
+        <h1 class="star-wars__title rellax" data-rellax-desktop-speed="0" data-rellax-speed="5">
+            You are the Chosen One. You have brought balance to this world. Stay on this path, and you will do it again
+            for the galaxy. But beware your heart.
         </h1>
-        <a href="" class="star-wars__button rellax" data-rellax-speed="6" >Fight the Dark Side</a>
+        <a href="" class="star-wars__button rellax" data-rellax-desktop-speed="2" data-rellax-speed="5">Fight the Dark
+            Side</a>
     </section>
 
-    <section class="star-wars__history rellax" id="history">
-        <div class="star-wars__history--image " >
-            <img src="./images/millennium-falcon.png" alt="" class="millennium-falcon rellax" data-rellax-speed="6" data-rellax-mobile-speed="10">
+    <section class="star-wars__history rellax">
+        <div class="star-wars__history--image rellax" data-rellax-desktop-speed="6" data-rellax-speed="6">
+            <img src="./images/millennium-falcon.png" alt="Millenium Falcon" class="millennium-falcon ">
         </div>
-        <p class="star-wars__text rellax" data-rellax-desktop-speed="10" data-rellax-speed="4">
-            Star Wars (conocida también en español como La guerra de las galaxias) es una franquicia compuesta primordialmente de una serie de películas concebidas por el cineasta estadounidense George Lucas en la década de 1970, y producidas y distribuidas por The Walt Disney Company a partir de 2012. Su trama describe las vivencias de un grupo de personajes que habitan en una galaxia ficticia e interactúan con elementos como «la Fuerza», un campo de energía metafísico y omnipresente que posee un «lado oscuro» provocado por la ira, el miedo y el odio.
+        <p class="star-wars__text rellax" data-rellax-desktop-speed="10" data-rellax-speed="4" id="history">
+            Star Wars (conocida también en español como La guerra de las galaxias) es una franquicia compuesta
+            primordialmente de una serie de películas concebidas por el cineasta estadounidense George Lucas en la
+            década de 1970, y producidas y distribuidas por The Walt Disney Company a partir de 2012. Su trama describe
+            las vivencias de un grupo de personajes que habitan en una galaxia ficticia e interactúan con elementos como
+            «la Fuerza», un campo de energía metafísico y omnipresente que posee un «lado oscuro» provocado por la ira,
+            el miedo y el odio.
         </p>
     </section>
 
-    <section class="star-wars__gallery rellax" id="gallery" data-rellax-speed="5">
-        <div class="star-wars__gallery--image rellax" >
-            <img src="images/mandalorian.jpg" id="sith" alt="">
+    <section class="star-wars__gallery rellax" data-rellax-speed="5" id="gallery">
+        <div class="star-wars__gallery--image rellax">
+            <img src="images/mandalorian.jpg" alt="The Mandalorian">
         </div>
         <div class="star-wars__gallery--image rellax" data-rellax-desktop-speed="1">
-            
-            <img src="images/city.png" id="sith" alt="" data-rellax-desktop-speed="3">
+
+            <img src="images/city.png" alt="City of Star Wars" data-rellax-desktop-speed="3">
         </div>
         <div class="star-wars__gallery--image rellax" data-rellax-desktop-speed="5">
-            <img src="images/sith.jpg" id="sith" alt="">
+            <img src="images/sith.jpg" alt="Sith Image">
         </div>
     </section>
-    
-    <footer id="social">
+
+    <footer class="star-wars__footer" id="social">
+        <h2 class="star-wars__footer--title">Follow Star Wars</h2>
+        <div class="star-wars__footer--icons">
+            <a href="https://www.facebook.com/StarWars" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/starwars" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/starwars/" target="_blank"><i
+                    class="fab fa-instagram-square fa-2x"></i></a>
+            <a href="https://starwars.tumblr.com/" target="_blank"><i class="fab fa-tumblr-square fa-2x"></i></a>
+            <a href="https://www.youtube.com/user/starwars" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+        </div>
 
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+        integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+        crossorigin="anonymous"></script>
     <script>
         let rellax = new Rellax('.rellax');
     </script>
 </body>
+
 </html>
