@@ -1,0 +1,168 @@
+
+@import url('fonts.css');
+@import url('root.css');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Jedi',sans-serif;
+    color: var(--secondary-color)
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/star-wars-landscape.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400vh;
+    height: 100%;
+}
+
+section{
+    position: relative;
+}
+
+.star-wars__header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    background: var(--gradient);
+    position: fixed;
+    z-index: 5;
+}
+
+.star-wars__logo{
+    width: 100px;
+    position: relative;
+    left: 20px;
+}
+
+.star-wars__logo--text{
+    line-height: .75em;
+    color: var(--primary-yellow);
+    font-size: 25px;
+}
+
+.star-wars__nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 25em;
+}
+
+.star-wars__nav--link, .star-wars__button{
+    text-decoration: none;
+}
+
+.star-wars__text{
+    font-family: 'DoHyeon';
+    font-size: 30px;
+    background: var(--gradient);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.star-wars__website{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+    background: var(--gradient);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.star-wars__title{
+    font-family: 'DoHyeon';
+    font-size: 3vw;
+    text-align: center;
+    padding: 35px;
+}
+
+.star-wars__button{
+    background: var(--button-gradient);
+    color: var(--primary-color);
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.star-wars__history{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    padding: 50px;
+    min-height: 500px;
+}
+
+.star-wars__history--image{
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.millennium-falcon{
+    width: 100%;
+    height: 100%;
+}
+
+.star-wars__gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    min-height: 500px;
+    padding: 20px;
+}
+
+.star-wars__gallery--image{
+    max-width: 500px;
+    max-height: 400px;
+}
+.star-wars__gallery--image img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1000px){
+    body{
+        background-image: url('../images/space-inverse.jpg');
+    }
+    .star-wars__history{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .star-wars__gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 840px){
+    .star-wars__title{
+        font-size: 5vw;
+        align-self: end;
+    }
+    .star-wars__website{
+        grid-template-columns: 1fr;
+        max-height: 200px;
+    }
+
+    .star-wars__text{
+        font-size: 4vw;
+    }
+
+    .star-wars__nav--link{
+        font-size: 12px;
+    }
+
+}
+

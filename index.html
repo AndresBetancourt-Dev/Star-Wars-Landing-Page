@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rellax.js Test - Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="star-wars__header">
+             <div class="star-wars__logo">
+                 <div class="star-wars__logo--text">
+                     STAR
+                 </div>
+                 <div class="star-wars__logo--text">
+                    WARS
+                </div>
+             </div>
+            <ul class="star-wars__nav">
+                <li class="star-wars__nav--item">
+                    <a href="#history" class="star-wars__nav--link">History</a>
+                </li>
+                <li class="star-wars__nav--item">
+                    <a href="#gallery" class="star-wars__nav--link">images</a>
+                </li>
+                <li class="star-wars__nav--item">
+                    <a href="#social" class="star-wars__nav--link">Social</a>
+                </li>
+            </ul>
+    </header>
+
+    <section class="star-wars__website rellax">
+        <h1 class="star-wars__title rellax" data-rellax-speed="4">
+            You are the Chosen One. You have brought balance to this world. Stay on this path, and you will do it again for the galaxy. But beware your heart.
+        </h1>
+        <a href="" class="star-wars__button rellax" data-rellax-speed="6" >Fight the Dark Side</a>
+    </section>
+
+    <section class="star-wars__history rellax" id="history">
+        <div class="star-wars__history--image " >
+            <img src="./images/millennium-falcon.png" alt="" class="millennium-falcon rellax" data-rellax-speed="6" data-rellax-mobile-speed="10">
+        </div>
+        <p class="star-wars__text rellax" data-rellax-desktop-speed="10" data-rellax-speed="4">
+            Star Wars (conocida también en español como La guerra de las galaxias) es una franquicia compuesta primordialmente de una serie de películas concebidas por el cineasta estadounidense George Lucas en la década de 1970, y producidas y distribuidas por The Walt Disney Company a partir de 2012. Su trama describe las vivencias de un grupo de personajes que habitan en una galaxia ficticia e interactúan con elementos como «la Fuerza», un campo de energía metafísico y omnipresente que posee un «lado oscuro» provocado por la ira, el miedo y el odio.
+        </p>
+    </section>
+
+    <section class="star-wars__gallery rellax" id="gallery" data-rellax-speed="5">
+        <div class="star-wars__gallery--image rellax" >
+            <img src="images/mandalorian.jpg" id="sith" alt="">
+        </div>
+        <div class="star-wars__gallery--image rellax" data-rellax-desktop-speed="1">
+            
+            <img src="images/city.png" id="sith" alt="" data-rellax-desktop-speed="3">
+        </div>
+        <div class="star-wars__gallery--image rellax" data-rellax-desktop-speed="5">
+            <img src="images/sith.jpg" id="sith" alt="">
+        </div>
+    </section>
+    
+    <footer id="social">
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous"></script>
+    <script>
+        let rellax = new Rellax('.rellax');
+    </script>
+</body>
+</html>
