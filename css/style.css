@@ -221,3 +221,90 @@ section{
 
 }
 
+
+
+/* ---------------------------------------------------------------------------
+   Accessibility & image fixes (no visual change to the existing design)
+--------------------------------------------------------------------------- */
+
+/* The logo is now a link back to the top; keep it looking exactly the same. */
+a.star-wars__logo {
+    display: block;
+    text-decoration: none;
+}
+
+/* Keyboard users get the same highlight as mouse users. */
+.star-wars__logo:focus-visible .star-wars__logo--text {
+    background: var(--primary-yellow);
+    color: var(--primary-color);
+    width: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.star-wars__nav--item:focus-within,
+.star-wars__button:focus-visible {
+    transform: scale(1.2, 1.2);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--primary-yellow);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Images keep their boxes but are no longer stretched out of proportion. */
+.millennium-falcon {
+    object-fit: contain;
+}
+
+.star-wars__gallery--image img {
+    object-fit: cover;
+}
+
+/* Section titles for screen readers only. */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* "Skip to content" appears only when reached with the keyboard. */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 10;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--button-gradient);
+    color: var(--primary-color);
+    font-family: 'DoHyeon', sans-serif;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+/* Anchor targets aren't hidden behind the fixed header. */
+[id] {
+    scroll-margin-top: 90px;
+}
+
+/* Respect the OS "reduce motion" setting. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
